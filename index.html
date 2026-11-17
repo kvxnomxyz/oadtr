@@ -12,7 +12,7 @@
 <script>
 $("#gh").href="https://github.com/"+REPO;
 let L=[];
-async function load(){try{L=(await allIssues()).map(detect).filter(Boolean);$("#st").textContent=""}catch(e){$("#st").textContent="Could not reach GitHub: "+e.message}draw()}
+async function load(){if(REPO.startsWith("OWNER"))$("#st").textContent="Set REPO in app.js first. ";try{const I=await allIssues();L=I.map(detect).filter(Boolean);$("#st").textContent+=`Scanned ${I.length} issues, ${L.length} have device.json + .md.`}catch(e){$("#st").textContent="Could not reach GitHub: "+e.message}draw()}
 function draw(){
   const p=location.hash==="#pending",q=$("#q").value.toLowerCase();
   $("#t1").className=p?"":"on";$("#t2").className=p?"on":"";
