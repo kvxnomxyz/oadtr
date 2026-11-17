@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Create device - OADTR</title>
 <meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"></head><body>
-<header><b>OADTR</b> <a href="index.html">Home</a><a href="create-device.html">/create-device</a></header>
-<main><h2>Create device issue</h2>
+<div id="top">OADTR<small>The Open Android Device Tree Repository</small></div>
+<div id="page"><nav id="side"><h3>Navigation</h3><a href="index.html">Devices</a><a href="index.html#pending">Pending devices</a><a href="create-device.html">Create device</a><h3>Project</h3><a id="gh" href="#">GitHub</a><a id="guide" href="#">Issue guide</a></nav><main><h2>Create device issue</h2>
 <form onsubmit="return false">
 <fieldset><legend>1. Connect (optional)</legend>
 <button type="button" id="usb">Connect via USB (WebUSB)</button> <button type="button" id="ua">Detect this phone</button>
@@ -22,8 +22,8 @@
 <label>Notes</label><textarea name="notes" rows="3"></textarea></fieldset>
 <fieldset><legend>3. Issue preview</legend><pre id="prev"></pre><p id="errs" class="err"></p>
 <button type="button" id="dj" disabled>1. Download device.json</button> <button type="button" id="dm" disabled>2. Download .md</button> <button type="button" id="go" disabled>3. Open issue on GitHub</button>
-<p class="small">In the issue, drag BOTH downloaded files into the "Attached files" box. Without both uploaded files the issue is not listed on the site.</p></fieldset></form></main>
-<script src="app.js"></script>
+<p class="small">In the issue, drag BOTH downloaded files into the "Attached files" box. Without both uploaded files the issue is not listed on the site.</p></fieldset></form></main></div>
+<script src="app.js"></script><script>$("#gh").href="https://github.com/"+REPO;$("#guide").href="https://github.com/"+REPO+"/blob/main/docs/ISSUE_GUIDE.md"</script>
 <script>
 const f=document.forms[0].elements,V={0x18d1:"Google",0x2717:"Xiaomi",0x04e8:"Samsung"},h=n=>n.toString(16).padStart(4,"0");
 const L={brand:"Brand",name:"Marketing name",model:"Model number(s)",codename:"Codename",soc:"SoC / platform",action:"Action",bootloader:"Bootloader",usb:"USB IDs",sources:"Sources",notes:"Notes"};

@@ -1,21 +1,30 @@
 *{box-sizing:border-box}
-body{margin:0;font:14px Arial,Helvetica,sans-serif;background:#fff;color:#000}
-header{background:#e4e4e4;border-bottom:1px solid #999;padding:8px 16px}
-header b{font-size:18px}header a{margin-left:16px}
-main{max-width:960px;margin:0 auto;padding:16px}
-a{color:#0645ad}
-.tabs{border-bottom:1px solid #999;margin:12px 0}
-.tabs a{display:inline-block;padding:5px 12px;border:1px solid #999;border-bottom:0;background:#e4e4e4;color:#000;text-decoration:none;margin-right:2px}
-.tabs a.on{background:#fff;position:relative;top:1px;font-weight:bold}
+body{margin:0;font:14px/1.6 sans-serif;background:#f6f6f6;color:#202122}
+a{color:#0645ad;text-decoration:none}a:hover{text-decoration:underline}
+#top{background:#fff;border-bottom:1px solid #a7d7f9;padding:10px 16px;font:bold 22px Georgia,serif}
+#top small{font:12px sans-serif;color:#54595d;margin-left:10px}
+#page{display:flex;max-width:1200px;margin:0 auto}
+#side{width:170px;padding:16px 10px;font-size:13px}
+#side h3{font-size:11px;color:#54595d;margin:14px 0 4px;border-bottom:1px solid #c8ccd1;text-transform:uppercase}
+#side a{display:block;padding:1px 0}
+main{flex:1;min-width:0;background:#fff;border:1px solid #a7d7f9;border-right:0;padding:16px 24px;min-height:80vh}
+h1,h2{font-family:Georgia,serif;font-weight:normal;border-bottom:1px solid #a2a9b1;margin:.4em 0}
+h1{font-size:26px}h2{font-size:19px}
+.tabs{border-bottom:1px solid #a7d7f9;margin:0 0 12px}
+.tabs a{display:inline-block;padding:4px 12px;border:1px solid #a7d7f9;border-bottom:0;background:#f8f9fa;margin-right:2px}
+.tabs a.on{background:#fff;position:relative;top:1px;color:#202122}
 table{border-collapse:collapse;width:100%}
-th,td{border:1px solid #aaa;padding:4px 8px;text-align:left}
-th{background:#e4e4e4}
-tr:nth-child(even) td{background:#f6f6f6}
-fieldset{border:1px solid #999;margin:12px 0;padding:10px 14px;background:#f6f6f6}
+.wikitable th,.wikitable td{border:1px solid #a2a9b1;padding:4px 8px;text-align:left}
+.wikitable th{background:#eaecf0}.wikitable{background:#f8f9fa}
+.infobox{float:right;width:300px;margin:0 0 12px 16px;font-size:13px}
+.infobox caption{font-weight:bold;background:#cedff2;border:1px solid #a2a9b1;border-bottom:0;padding:4px}
+.infobox th{width:35%;vertical-align:top}
+.badge{border:1px solid #a2a9b1;background:#f8f9fa;padding:0 6px;font-size:12px}
+fieldset{border:1px solid #a2a9b1;margin:12px 0;padding:10px 14px;background:#f8f9fa}
 legend{font-weight:bold;padding:0 4px}
 label{display:block;margin:8px 0 2px}
-input,select,textarea{width:100%;padding:4px;border:1px solid #888;font:inherit;background:#fff}
-button{padding:4px 12px;border:1px solid #666;background:#ddd;font:inherit;cursor:pointer}
+input,select,textarea{width:100%;padding:4px;border:1px solid #a2a9b1;font:inherit;background:#fff}
+button{padding:4px 12px;border:1px solid #a2a9b1;background:#f8f9fa;font:inherit;cursor:pointer}
 button:disabled{color:#888;cursor:default}
-pre{background:#fff;border:1px solid #aaa;padding:8px;overflow:auto}
-.small{color:#555;font-size:12px}.err{color:#a00}.hidden{display:none}
+pre{background:#f8f9fa;border:1px solid #eaecf0;padding:8px;overflow:auto}
+.small{color:#54595d;font-size:12px}.err{color:#d33}.hidden{display:none}
