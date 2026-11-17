@@ -1,4 +1,4 @@
-const REPO="OWNER/oadtr"; // <-- change to your GitHub user/repo
+const REPO="kvxnomxyz/oadtr";
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 async function issues(state){
