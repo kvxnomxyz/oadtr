@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>OADTR - Open Android Device Tree Repository</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"></head><body>
+<header><b>OADTR</b> Open Android Device Tree Repository <a href="index.html">Home</a><a href="create-device.html">/create-device</a><a id="gh" href="#">GitHub</a></header>
+<main>
+<div class="tabs"><a href="#devices" id="t1">Devices</a><a href="#pending" id="t2">Pending devices</a></div>
+<input id="q" placeholder="Filter by name" style="margin-bottom:8px">
+<p id="st" class="small">Loading...</p>
+<table><thead><tr><th>Name</th><th>device.json</th><th>Description</th><th>Issue</th><th>Date</th></tr></thead><tbody id="bd"></tbody></table>
+<p class="small">An issue is listed only if it has an uploaded <code>device.json</code> and an uploaded <code>[name].md</code>. Closed = Devices, open = Pending. Title and typed description are ignored.</p>
+</main>
+<script src="app.js"></script>
+<script>
+$("#gh").href="https://github.com/"+REPO;
+let L=[];
+async function load(){try{L=(await allIssues()).map(detect).filter(Boolean);$("#st").textContent=""}catch(e){$("#st").textContent="Could not reach GitHub: "+e.message}draw()}
+function draw(){
+  const p=location.hash==="#pending",q=$("#q").value.toLowerCase();
+  $("#t1").className=p?"":"on";$("#t2").className=p?"on":"";
+  $("#bd").innerHTML=L.filter(d=>(d.state==="open")===p&&d.name.toLowerCase().includes(q)).map(d=>`<tr><td>${esc(d.name)}</td><td><a href="${esc(d.json)}">device.json</a></td><td><a href="${esc(d.md)}">.md</a></td><td><a href="${esc(d.issue)}">#${d.num}</a></td><td>${d.date}</td></tr>`).join("")||"<tr><td colspan=5>Nothing here.</td></tr>";
+}
+addEventListener("hashchange",draw);$("#q").oninput=draw;load();
+</script></body></html>

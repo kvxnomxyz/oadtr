@@ -1,0 +1,21 @@
+*{box-sizing:border-box}
+body{margin:0;font:14px Arial,Helvetica,sans-serif;background:#fff;color:#000}
+header{background:#e4e4e4;border-bottom:1px solid #999;padding:8px 16px}
+header b{font-size:18px}header a{margin-left:16px}
+main{max-width:960px;margin:0 auto;padding:16px}
+a{color:#0645ad}
+.tabs{border-bottom:1px solid #999;margin:12px 0}
+.tabs a{display:inline-block;padding:5px 12px;border:1px solid #999;border-bottom:0;background:#e4e4e4;color:#000;text-decoration:none;margin-right:2px}
+.tabs a.on{background:#fff;position:relative;top:1px;font-weight:bold}
+table{border-collapse:collapse;width:100%}
+th,td{border:1px solid #aaa;padding:4px 8px;text-align:left}
+th{background:#e4e4e4}
+tr:nth-child(even) td{background:#f6f6f6}
+fieldset{border:1px solid #999;margin:12px 0;padding:10px 14px;background:#f6f6f6}
+legend{font-weight:bold;padding:0 4px}
+label{display:block;margin:8px 0 2px}
+input,select,textarea{width:100%;padding:4px;border:1px solid #888;font:inherit;background:#fff}
+button{padding:4px 12px;border:1px solid #666;background:#ddd;font:inherit;cursor:pointer}
+button:disabled{color:#888;cursor:default}
+pre{background:#fff;border:1px solid #aaa;padding:8px;overflow:auto}
+.small{color:#555;font-size:12px}.err{color:#a00}.hidden{display:none}
